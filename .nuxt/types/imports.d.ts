@@ -116,6 +116,7 @@ declare global {
   const useModel: typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['useModel']
   const useNuxtApp: typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/nuxt')['useNuxtApp']
   const useNuxtData: typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']
+  const useNuxtDevTools: typeof import('../../node_modules/.pnpm/@nuxt+devtools@1.3.6_vite@5.3.1/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']
   const usePreviewMode: typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']
   const useRequestEvent: typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']
   const useRequestFetch: typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/ssr')['useRequestFetch']
@@ -289,6 +290,7 @@ declare module 'vue' {
     readonly useModel: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['useModel']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
+    readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+devtools@1.3.6_vite@5.3.1/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly usePreviewMode: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']>
     readonly useRequestEvent: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']>
     readonly useRequestFetch: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/ssr')['useRequestFetch']>
@@ -455,6 +457,7 @@ declare module '@vue/runtime-core' {
     readonly useModel: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['useModel']>
     readonly useNuxtApp: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/nuxt')['useNuxtApp']>
     readonly useNuxtData: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/asyncData')['useNuxtData']>
+    readonly useNuxtDevTools: UnwrapRef<typeof import('../../node_modules/.pnpm/@nuxt+devtools@1.3.6_vite@5.3.1/node_modules/@nuxt/devtools/dist/runtime/use-nuxt-devtools')['useNuxtDevTools']>
     readonly usePreviewMode: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/preview')['usePreviewMode']>
     readonly useRequestEvent: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/ssr')['useRequestEvent']>
     readonly useRequestFetch: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/ssr')['useRequestFetch']>
