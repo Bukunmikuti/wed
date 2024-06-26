@@ -160,10 +160,11 @@ import { Vue3Marquee } from "vue3-marquee";
   margin: 0 20px;
   font-weight: 400;
   line-height: 1.8;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #d5d5d5;
 
   @media @desktop {
+    font-size: 1.8rem;
     left: 0;
     top: 30%;
     width: 370px;

@@ -84,6 +84,10 @@ const modules = ref([Navigation, Pagination, Scrollbar]);
   padding: 40px 0;
 
   .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 40px;
     font-family: "Source Serif 4", serif;
 
@@ -93,7 +97,6 @@ const modules = ref([Navigation, Pagination, Scrollbar]);
 
     img {
       width: 100px;
-      margin-top: -25px;
       vertical-align: middle;
     }
   }
@@ -110,15 +113,22 @@ const modules = ref([Navigation, Pagination, Scrollbar]);
   width: 100%;
   padding: 20px;
   border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   //height: 500px;
 
   .slide {
     width: 100%;
     height: 100%;
     border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
       width: 100%;
       height: 400px;
+      max-width: 500px;
       object-fit: cover;
       border-radius: 20px;
     }
