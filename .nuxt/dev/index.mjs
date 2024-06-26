@@ -8,7 +8,6 @@ import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRender
 import { stringify, uneval } from 'file://C:/Users/ADMIN/Documents/projects/wed/node_modules/.pnpm/devalue@5.0.0/node_modules/devalue/index.js';
 import destr from 'file://C:/Users/ADMIN/Documents/projects/wed/node_modules/.pnpm/destr@2.0.3/node_modules/destr/dist/index.mjs';
 import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL } from 'file://C:/Users/ADMIN/Documents/projects/wed/node_modules/.pnpm/ufo@1.5.3/node_modules/ufo/dist/index.mjs';
-import { renderToString } from 'file://C:/Users/ADMIN/Documents/projects/wed/node_modules/.pnpm/vue@3.4.30/node_modules/vue/server-renderer/index.mjs';
 import { hash } from 'file://C:/Users/ADMIN/Documents/projects/wed/node_modules/.pnpm/ohash@1.1.3/node_modules/ohash/dist/index.mjs';
 import { propsToString, renderSSRHead } from 'file://C:/Users/ADMIN/Documents/projects/wed/node_modules/.pnpm/@unhead+ssr@1.9.14/node_modules/@unhead/ssr/dist/index.mjs';
 import { createFetch as createFetch$1, Headers as Headers$1 } from 'file://C:/Users/ADMIN/Documents/projects/wed/node_modules/.pnpm/ofetch@1.3.4/node_modules/ofetch/dist/node.mjs';
@@ -622,7 +621,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _BWEFgnkyA6 = (nitroApp) => {
+const _0iAlOwpaNG = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -690,7 +689,7 @@ function onConsoleLog(callback) {
 
 const plugins = [
   _9OaEkNAAtx,
-_BWEFgnkyA6
+_0iAlOwpaNG
 ];
 
 const scheduledTasks = false;
@@ -820,11 +819,11 @@ const errorHandler = (async function errorhandler(error, event) {
   return send(event, html);
 });
 
-const _lazy_RvLBPN = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_cil423 = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_RvLBPN, lazy: true, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_RvLBPN, lazy: true, middleware: false, method: undefined }
+  { route: '/__nuxt_error', handler: _lazy_cil423, lazy: true, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_cil423, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -1077,7 +1076,7 @@ const unheadPlugins = true ? [CapoPlugin({ track: true })] : [];
 
 const renderSSRHeadOptions = {};
 
-const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[{"rel":"preconnect","href":"https://fonts.googleapis.com"},{"rel":"preconnect","href":"https://fonts.gstatic.com","crossorigin":""},{"rel":"stylesheet","href":"https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,200..900&family=Poppins:wght@400;500;600;700;900&family=Raleway:wght@400;800&display=swap"}],"style":[],"script":[],"noscript":[]};
 
 const appRootTag = "div";
 
@@ -1102,32 +1101,7 @@ function publicAssetsURL(...path) {
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
 const getClientManifest = () => import('file://C:/Users/ADMIN/Documents/projects/wed/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
-const getServerEntry = () => import('file://C:/Users/ADMIN/Documents/projects/wed/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
 const getSSRStyles = lazyCachedFunction(() => Promise.resolve().then(function () { return styles$1; }).then((r) => r.default || r));
-const getSSRRenderer = lazyCachedFunction(async () => {
-  const manifest = await getClientManifest();
-  if (!manifest) {
-    throw new Error("client.manifest is not available");
-  }
-  const createSSRApp = await getServerEntry();
-  if (!createSSRApp) {
-    throw new Error("Server bundle is not available");
-  }
-  const options = {
-    manifest,
-    renderToString: renderToString$1,
-    buildAssetsURL
-  };
-  const renderer = createRenderer(createSSRApp, options);
-  async function renderToString$1(input, context) {
-    const html = await renderToString(input, context);
-    if (process.env.NUXT_VITE_NODE_OPTIONS) {
-      renderer.rendererContext.updateManifest(await getClientManifest());
-    }
-    return APP_ROOT_OPEN_TAG + html + APP_ROOT_CLOSE_TAG;
-  }
-  return renderer;
-});
 const getSPARenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   const spaTemplate = await Promise.resolve().then(function () { return _virtual__spaTemplate; }).then((r) => r.template).catch(() => "").then((r) => APP_ROOT_OPEN_TAG + r + APP_ROOT_CLOSE_TAG);
@@ -1214,7 +1188,7 @@ const renderer = defineRenderHandler(async (event) => {
     url,
     event,
     runtimeConfig: useRuntimeConfig(event),
-    noSSR: event.context.nuxt?.noSSR || routeOptions.ssr === false && !isRenderingIsland || (false),
+    noSSR: !!true   ,
     head,
     error: !!ssrError,
     nuxt: void 0,
@@ -1230,7 +1204,7 @@ const renderer = defineRenderHandler(async (event) => {
     },
     islandContext
   };
-  const renderer = ssrContext.noSSR ? await getSPARenderer() : await getSSRRenderer();
+  const renderer = await getSPARenderer() ;
   const _rendered = await renderer.renderToString(ssrContext).catch(async (error) => {
     if (ssrContext._renderResponse && error.message === "skipping render") {
       return {};
@@ -1408,7 +1382,7 @@ function renderPayloadJsonScript(opts) {
     "type": "application/json",
     "id": opts.id,
     "innerHTML": contents,
-    "data-ssr": !(opts.ssrContext.noSSR)
+    "data-ssr": !(true )
   };
   if (opts.src) {
     payload["data-src"] = opts.src;

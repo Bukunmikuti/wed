@@ -1,1 +1,18 @@
-export { default } from "file:///C:/Users/ADMIN/Documents/projects/wed/node_modules/.pnpm/@nuxt+vite-builder@3.12.2_vue@3.4.30/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
+export default {
+  "@vite/client": {
+    "prefetch": true,
+    "isEntry": true,
+    "file": "@vite/client",
+    "css": [],
+    "module": true,
+    "resourceType": "script"
+  },
+  "C:/Users/ADMIN/Documents/projects/wed/node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/entry.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "isEntry": true,
+    "file": "C:/Users/ADMIN/Documents/projects/wed/node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/entry.js"
+  }
+}
