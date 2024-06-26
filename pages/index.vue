@@ -1,160 +1,127 @@
 <template>
-  <div id="header">
-    <div class="overlay"></div>
-    <div id="wrapper">
-      <div id="top-header">
-        <img class="logo" src="@/assets/images/logo.svg" />
-        <h3>FROM TWITTER TO ALTER</h3>
-        <Icon
-          id="menu"
-          name="mingcute:love-fill"
-          size="45px"
-          color="#F2C4F2"
-        ></Icon>
-      </div>
-      <div id="marquee-wrapper">
-        <Vue3Marquee clone="true" duration="20">
-          <img src="@/assets/images/name.svg" />
-        </Vue3Marquee>
-      </div>
-      <div id="date">
-        <span>11</span>
-        <hr />
-        <span>07</span>
-        <hr />
-        <span>24</span>
-      </div>
-      <div id="header-text">
-        <p>
-          In your arms, I have found my forever home. Your love is my sanctuary,
-          where I find peace and happiness. Thank you for being my rock, my
-          confidant, and my greatest adventure. I have promised and shall yet
-          promise to love you, even unto my end.
-        </p>
-      </div>
+  <Header></Header>
+  <div id="story">
+    <div class="title">
+      <h1>Our Love Story</h1>
+      <img src="@/assets/images/line.png" />
     </div>
+    <div class="content">
+      <p>
+        Once upon a tweet, in the vast and bustling realm of Twitter, our paths
+        crossed in the most unexpected and delightful way. It all started with a
+        simple retweet. <br /><br />
+        One rainy evening, Oyinkansola was scrolling through Twitter when she
+        stumbled upon a tweet about a rare book. Being a literature enthusiast,
+        Oyinkansola couldn't resist retweeting it with a thoughtful comment.
+        Little did she know, this tweet would soon change her life. Across the
+        country, Opeyemi, an avid reader and aspiring writer, came across
+        Oyinkansola's retweet. Intrigued by her comment and the book in
+        question, Opeyemi replied with a witty remark and a book recommendation
+        of his own. What started as a simple interaction grew into a meaningful
+        friendship. <br /><br />
+        We soon began direct messaging, sharing personal stories, dreams, and
+        even the struggles we faced in our daily lives. Oyinkansola admired
+        Opeyemi's passion for writing, while Opeyemi was captivated by
+        Oyinkansola's profound love for literature
+      </p>
+    </div>
+  </div>
+
+  <div id="images-wrapper">
+    <swiper
+      ref="swiperEl"
+      :slides-per-view="1"
+      :speed="500"
+      :modules="modules"
+      :space-between="100"
+      :autoplay="true"
+      :loop="true"
+      :pagination="true"
+    >
+      <swiper-slide class="slide"
+        ><img src="@/assets/images/img3.jpg"
+      /></swiper-slide>
+      <swiper-slide class="slide"
+        ><img src="@/assets/images/img4.jpg"
+      /></swiper-slide>
+      <swiper-slide class="slide"
+        ><img src="@/assets/images/img2.jpg"
+      /></swiper-slide>
+      <swiper-slide class="slide"
+        ><img src="@/assets/images/img4.jpg"
+      /></swiper-slide>
+      <swiper-slide class="slide"
+        ><img src="@/assets/images/img3.jpg"
+      /></swiper-slide>
+      <swiper-slide class="slide"
+        ><img src="@/assets/images/img1.jpg"
+      /></swiper-slide>
+    </swiper>
   </div>
 </template>
 
-<script setup>
-import { Vue3Marquee } from "vue3-marquee";
+<script setup lang="ts">
+import { Swiper, SwiperSlide } from "swiper/vue";
+import { Navigation, Pagination, Scrollbar } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/effect-coverflow";
+
+const modules = ref([Navigation, Pagination, Scrollbar]);
 </script>
 
 <style scoped lang="less">
-#header {
+#story {
   width: 100%;
-  height: 100dvh;
-  background: url(../assets/images/img1.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  margin-bottom: 40px;
-
-  .overlay {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-  }
-}
-
-#wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  color: white;
-}
-
-#top-header {
-  margin: 20px 30px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 40px 0;
 
-  h3 {
-    font-weight: 700;
-    color: #d3d3d3;
-    font-size: 2.2rem;
-    display: none;
+  .title {
+    margin-top: 40px;
+    font-family: "Source Serif 4", serif;
 
-    @media @desktop {
-      display: block;
+    h1 {
+      font-weight: 500;
+    }
+
+    img {
+      width: 100px;
+      margin-top: -25px;
+      vertical-align: middle;
     }
   }
 
-  .logo {
-    width: 50px;
-    height: 50px;
-  }
-
-  #menu {
-    cursor: pointer;
+  .content {
+    max-width: 700px;
+    padding: 20px;
+    text-align: center;
+    color: #0c0d0d;
   }
 }
 
-#marquee-wrapper {
+#images-wrapper {
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  //height: 500px;
 
-  img {
-    width: 400px;
-    //transform: scale(0.7);
-    opacity: 0.7;
-    margin: 0 15px;
-  }
-}
-
-#date {
-  position: absolute;
-  right: 0;
-  top: 38%;
-  margin: 0 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 18px;
-  border: 2px solid #f2c4f247;
-  border-radius: 50px;
-
-  span {
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: #f2c4f2;
-  }
-
-  hr {
-    width: 5%;
-    border-color: #f2c4f2;
-  }
-}
-
-#header-text {
-  max-width: 80%;
-  text-align: left;
-  padding: 10px;
-  position: absolute;
-  left: 0;
-  bottom: 10%;
-  margin: 0 40px;
-  font-weight: 400;
-  line-height: 1.8;
-  font-size: 1.8rem;
-  color: #ececec;
-
-  @media @desktop {
-    left: 0; 
-    top: 30%;
-    width: 370px;
+  .slide {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
   }
 }
 </style>
