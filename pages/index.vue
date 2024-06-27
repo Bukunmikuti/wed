@@ -157,8 +157,16 @@ const makeActive = (pos: number) => {
 };
 
 const toCalender = () => {
-  return navigateTo("https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240711T083000Z%2F20240711T100000Z&details=Kindly%20take%20note%20of%20the%20following%3A%0A1.%20Invitation%20is%20strictly%20by%20invitation.%0A2.%20Church%20ceremony%20begins%20by%209%3A30am%20-%2011%3A00am%0A3.%20Reception%20begins%20by%2012%3A00pm%20-%204%3A00pm%0A%0AThank%20you%20for%20celebrating%20with%20us%2C%20we%20hope%20to%20see%20you%20soon.&location=23%2C%20Akanni%20street%2C%20Bariga%2C%20Lagos%20state%2C%20Nigeria&text=Opeyemi%20Weds%20Oyinkansola", {external: true})
-}
+  return navigateTo(
+    "https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240711T083000Z%2F20240711T100000Z&details=Kindly%20take%20note%20of%20the%20following%3A%0A1.%20Invitation%20is%20strictly%20by%20invitation.%0A2.%20Church%20ceremony%20begins%20by%209%3A30am%20-%2011%3A00am%0A3.%20Reception%20begins%20by%2012%3A00pm%20-%204%3A00pm%0A%0AThank%20you%20for%20celebrating%20with%20us%2C%20we%20hope%20to%20see%20you%20soon.&location=23%2C%20Akanni%20street%2C%20Bariga%2C%20Lagos%20state%2C%20Nigeria&text=Opeyemi%20Weds%20Oyinkansola",
+    {
+      external: true,
+      open: {
+        target: "_blank",
+      },
+    }
+  );
+};
 </script>
 
 <style scoped lang="less">
@@ -263,6 +271,11 @@ const toCalender = () => {
     background: #e38ce3;
     font-weight: 500;
     color: white;
+    font-family: Poppins, sans-serif;
+
+    &:hover {
+      background: #de66de;
+    }
   }
 }
 
@@ -357,12 +370,17 @@ const toCalender = () => {
 }
 
 #map-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 20px;
   .map {
-    max-width: 100%;
+    width: 100%;
     list-style: none;
     transition: none;
     overflow: hidden;
-    width: 500px;
+    max-width: 800px;
     height: 300px;
   }
 }
