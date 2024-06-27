@@ -88,8 +88,7 @@
         </p>
       </div>
     </div>
-
-    <button id="calender" @click="toCalender">Add to calender</button>
+    <Button @click="toCalender">Add to calender</Button>
   </div>
 
   <div id="map-wrapper">
@@ -119,6 +118,16 @@
       </div>
     </div>
   </div>
+
+  <div id="guest-wrapper">
+    <div class="card">
+      <Icon name="ph:flower-lotus-duotone" size="30px" color="#de66de" />
+      <h4>Guest Area</h4>
+      <p>Share your moments, pictures and love with us.</p>
+      <Button>Enter Guest Area</Button>
+    </div>
+  </div>
+  <Thanks></Thanks>
 </template>
 
 <script setup lang="ts">
@@ -264,18 +273,8 @@ const toCalender = () => {
     }
   }
 
-  #calender {
-    padding: 10px 20px;
-    border-radius: 10px;
+  button {
     margin-top: 30px;
-    background: #e38ce3;
-    font-weight: 500;
-    color: white;
-    font-family: Poppins, sans-serif;
-
-    &:hover {
-      background: #de66de;
-    }
   }
 }
 
@@ -296,9 +295,9 @@ const toCalender = () => {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
     transition: background 200ms ease-in-out;
-    border: 2.5px solid #fcaffc;
+    border: 2.5px solid #e678e6;
     cursor: pointer;
     @media @desktop {
       width: 400px;
@@ -320,7 +319,7 @@ const toCalender = () => {
       border-bottom-right-radius: 12px;
       border-bottom-left-radius: 12px;
       @media @desktop {
-        border-top: 2.5px solid #fcaffc;
+        border-top: 2.5px solid #e678e6;
         border-radius: 0;
         border-top-right-radius: 12px;
         border-bottom-right-radius: 12px;
@@ -328,7 +327,7 @@ const toCalender = () => {
     }
 
     &.active {
-      background: #e38ce3;
+      background: #e678e6;
       color: white !important;
 
       .icon {
@@ -352,6 +351,7 @@ const toCalender = () => {
       font-family: Poppins, sans-serif;
       font-size: 1.45rem;
       font-weight: 500;
+      margin-top: 10px;
       @media @desktop {
         font-size: 1.6rem;
       }
@@ -382,6 +382,38 @@ const toCalender = () => {
     overflow: hidden;
     max-width: 800px;
     height: 300px;
+  }
+}
+
+#guest-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+
+  .card {
+    width: 100%;
+    padding: 50px 30px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Source Serif 4", sans-serif;
+    text-align: center;
+
+    h4 {
+      margin-bottom: 0;
+    }
+
+    p {
+      color: #8d8d8d;
+    }
   }
 }
 </style>

@@ -54,7 +54,7 @@ import { Vue3Marquee } from "vue3-marquee";
   .overlay {
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.6);
     position: absolute;
     top: 0;
     left: 0;
@@ -108,7 +108,7 @@ import { Vue3Marquee } from "vue3-marquee";
   img {
     width: 400px;
     //transform: scale(0.7);
-    opacity: 0.7;
+    opacity: 0.8;
     margin: 0 15px;
   }
 }
