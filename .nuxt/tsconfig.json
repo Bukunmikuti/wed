@@ -86,6 +86,9 @@
       "#icon-collections": [
         "./icon-collections"
       ],
+      "#primevue-style": [
+        "./primevue-style.mjs"
+      ],
       "#vue-router": [
         "./vue-router-stub"
       ],
@@ -137,6 +140,7 @@
     "../.config/nuxt.*",
     "../**/*",
     "../node_modules/.pnpm/nuxt-icon@0.6.10_vite@5.3.1_vue@3.4.30/node_modules/nuxt-icon/runtime",
+    "../node_modules/.pnpm/nuxt-primevue@3.0.0_vue@3.4.30/node_modules/nuxt-primevue/runtime",
     "../node_modules/.pnpm/@nuxt+telemetry@2.5.4/node_modules/@nuxt/telemetry/runtime",
     ".."
   ],
@@ -145,6 +149,7 @@
     "../node_modules",
     "../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/node_modules",
     "../node_modules/.pnpm/nuxt-icon@0.6.10_vite@5.3.1_vue@3.4.30/node_modules/nuxt-icon/runtime/server",
+    "../node_modules/.pnpm/nuxt-primevue@3.0.0_vue@3.4.30/node_modules/nuxt-primevue/runtime/server",
     "../node_modules/.pnpm/@nuxt+telemetry@2.5.4/node_modules/@nuxt/telemetry/runtime/server",
     "../.output"
   ]

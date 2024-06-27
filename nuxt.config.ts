@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   ssr: false,
-  css: ['@/assets/css/main.less'],
+  css: ["@/assets/css/main.less"],
 
   vite: {
     css: {
@@ -17,6 +17,10 @@ export default defineNuxtConfig({
   app: {
     head: {
       link: [
+        { rel: "preload", as: "image", href: "./assets/images/img1.jpg" },
+        { rel: "preload", as: "image", href: "./assets/images/img2.jpg" },
+        { rel: "preload", as: "image", href: "./assets/images/img3.jpg" },
+        { rel: "preload", as: "image", href: "./assets/images/img4.jpg" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         {
           rel: "preconnect",
@@ -35,5 +39,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["nuxt-icon"]
+  modules: ["nuxt-icon", "nuxt-primevue"],
 });

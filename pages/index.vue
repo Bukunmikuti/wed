@@ -119,14 +119,7 @@
     </div>
   </div>
 
-  <div id="guest-wrapper">
-    <div class="card">
-      <Icon name="ph:flower-lotus-duotone" size="30px" color="#de66de" />
-      <h4>Guest Area</h4>
-      <p>Share your moments, pictures and love with us.</p>
-      <Button>Enter Guest Area</Button>
-    </div>
-  </div>
+  <Guest></Guest>
   <Thanks></Thanks>
 </template>
 
@@ -382,38 +375,6 @@ const toCalender = () => {
     overflow: hidden;
     max-width: 800px;
     height: 300px;
-  }
-}
-
-#guest-wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 20px;
-
-  .card {
-    width: 100%;
-    padding: 50px 30px;
-    background: white;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-      rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Source Serif 4", sans-serif;
-    text-align: center;
-
-    h4 {
-      margin-bottom: 0;
-    }
-
-    p {
-      color: #8d8d8d;
-    }
   }
 }
 </style>
