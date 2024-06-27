@@ -14,8 +14,6 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/pages/runtime/plugins/router").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/pages/runtime/plugins/prefetch.client").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/pages/runtime/plugins/check-if-page-unused").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/@nuxt+devtools@1.3.6_vite@5.3.1/node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.server").default> &
-  InjectionType<typeof import("../../node_modules/.pnpm/@nuxt+devtools@1.3.6_vite@5.3.1/node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.client").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/plugins/chunk-reload.client").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/plugins/dev-server-logs").default> &
   InjectionType<typeof import("../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/plugins/check-if-layout-used").default>

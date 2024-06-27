@@ -597,23 +597,6 @@ function getRouteRulesForPath(path) {
   return defu({}, ..._routeRulesMatcher.matchAll(path).reverse());
 }
 
-const script = `
-if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
-  Object.defineProperty(window, '__NUXT_DEVTOOLS_TIME_METRIC__', {
-    value: {},
-    enumerable: false,
-    configurable: true,
-  })
-}
-window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
-`;
-
-const _9OaEkNAAtx = (function(nitro) {
-  nitro.hooks.hook("render:html", (htmlContext) => {
-    htmlContext.head.push(`<script>${script}<\/script>`);
-  });
-});
-
 const rootDir = "C:/Users/ADMIN/Documents/projects/wed";
 
 const devReducers = {
@@ -688,8 +671,7 @@ function onConsoleLog(callback) {
 }
 
 const plugins = [
-  _9OaEkNAAtx,
-_0iAlOwpaNG
+  _0iAlOwpaNG
 ];
 
 const scheduledTasks = false;

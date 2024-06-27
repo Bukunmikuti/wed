@@ -8,7 +8,7 @@
         <Icon
           id="menu"
           name="mingcute:love-fill"
-          size="45px"
+          size="35px"
           color="#F2C4F2"
         ></Icon>
       </div>
@@ -71,7 +71,7 @@ import { Vue3Marquee } from "vue3-marquee";
 }
 
 #top-header {
-  margin: 20px 30px;
+  margin: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,8 +88,8 @@ import { Vue3Marquee } from "vue3-marquee";
   }
 
   .logo {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
   }
 
   #menu {
@@ -115,7 +115,7 @@ import { Vue3Marquee } from "vue3-marquee";
 
 #date {
   position: absolute;
-  top: 18%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -123,9 +123,10 @@ import { Vue3Marquee } from "vue3-marquee";
   justify-content: center;
   align-items: center;
   gap: 0 10px;
-  padding: 15px 18px;
+  padding: 9px 18px;
   border: 2px solid #f2c4f247;
   border-radius: 50px;
+  font-family: 'Source Serif 4', sans-serif;
 
   @media @desktop {
     flex-direction: column;
@@ -135,13 +136,15 @@ import { Vue3Marquee } from "vue3-marquee";
     margin: 0 30px;
     gap: 0;
     transform: none;
+    padding: 15px 18px;
   }
 
   span {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 500;
     color: #f2c4f2;
     padding: 0 6px;
+    font-weight: 700;
   }
 
   hr {
@@ -160,8 +163,9 @@ import { Vue3Marquee } from "vue3-marquee";
   margin: 0 20px;
   font-weight: 400;
   line-height: 1.8;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #d5d5d5;
+  font-family: 'Source Serif 4', sans-serif;
 
   @media @desktop {
     font-size: 1.8rem;
