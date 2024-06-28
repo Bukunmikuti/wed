@@ -28,7 +28,7 @@
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
     background-size: 500% auto;
-    animation: textShine 10s ease-in-out infinite alternate;
+    animation: textShine 7s ease-in-out infinite alternate;
 
     @keyframes textShine {
       0% {

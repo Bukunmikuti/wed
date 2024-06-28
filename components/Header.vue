@@ -44,7 +44,7 @@ import { Vue3Marquee } from "vue3-marquee";
 <style scoped lang="less">
 #header {
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   background: url(../assets/images/img1.jpg);
   background-position: center;
   background-size: cover;

@@ -1,4 +1,5 @@
 <template>
+  <Loader></Loader>
   <Header></Header>
   <div id="story">
     <div class="title">
@@ -292,31 +293,11 @@ const toCalender = () => {
     transition: background 200ms ease-in-out;
     border: 2.5px solid #e678e6;
     cursor: pointer;
+    margin-top: 20px;
+    border-radius: 20px;
     @media @desktop {
       width: 400px;
       height: 300px;
-    }
-
-    &:first-of-type {
-      border-top-right-radius: 12px;
-      border-top-left-radius: 12px;
-      @media @desktop {
-        border-radius: 0;
-        border-bottom-left-radius: 12px;
-        border-top-left-radius: 12px;
-      }
-    }
-
-    &:last-of-type {
-      border-top: none;
-      border-bottom-right-radius: 12px;
-      border-bottom-left-radius: 12px;
-      @media @desktop {
-        border-top: 2.5px solid #e678e6;
-        border-radius: 0;
-        border-top-right-radius: 12px;
-        border-bottom-right-radius: 12px;
-      }
     }
 
     &.active {
