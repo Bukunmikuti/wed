@@ -42,7 +42,7 @@ const swiper = useSwiper();
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background ease 500ms;
+    transition: background ease 200ms;
     transition-property: border, background;
 
     .icon {
