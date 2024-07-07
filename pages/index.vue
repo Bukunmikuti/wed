@@ -173,7 +173,7 @@ const toCalender = () => {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 20px;
 
     h2 {
       margin-bottom: 0;
