@@ -19,6 +19,12 @@
           ><img src="@/assets/images/img3.jpg"
         /></swiper-slide>
         <swiper-slide class="slide"
+          ><img src="@/assets/images/img6.jpg"
+        /></swiper-slide>
+        <swiper-slide class="slide"
+          ><img src="@/assets/images/img7.jpg"
+        /></swiper-slide>
+        <swiper-slide class="slide"
           ><img src="@/assets/images/img4.jpg"
         /></swiper-slide>
         <swiper-slide class="slide"
