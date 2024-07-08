@@ -1,11 +1,13 @@
 <template>
   <div id="header">
     <div class="overlay"></div>
+    <Menu v-show="isMenu"></Menu>
     <div id="wrapper">
       <div id="top-header">
         <img class="logo" src="@/assets/images/logo.svg" />
         <h3>FROM TWITTER TO ALTER</h3>
         <Icon
+          @click="showMenu"
           id="menu"
           name="mingcute:love-fill"
           size="35px"
@@ -39,6 +41,10 @@
 
 <script setup>
 import { Vue3Marquee } from "vue3-marquee";
+
+const showMenu = () => {
+  isMenu.value = true;
+};
 </script>
 
 <style scoped lang="less">
@@ -81,6 +87,7 @@ import { Vue3Marquee } from "vue3-marquee";
     color: #d5d5d5;
     font-size: 2.2rem;
     display: none;
+    font-family: "Source Serif 4", sans-serif;
 
     @media @desktop {
       display: block;
@@ -126,7 +133,7 @@ import { Vue3Marquee } from "vue3-marquee";
   padding: 9px 18px;
   border: 2px solid #f2c4f247;
   border-radius: 50px;
-  font-family: 'Source Serif 4', sans-serif;
+  font-family: "Source Serif 4", sans-serif;
 
   @media @desktop {
     flex-direction: column;
@@ -165,7 +172,7 @@ import { Vue3Marquee } from "vue3-marquee";
   line-height: 1.8;
   font-size: 1.4rem;
   color: #d5d5d5;
-  font-family: 'Source Serif 4', sans-serif;
+  font-family: "Source Serif 4", sans-serif;
 
   @media @desktop {
     font-size: 1.8rem;

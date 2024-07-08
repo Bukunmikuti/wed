@@ -78,8 +78,18 @@ const makeActive = (pos: number) => {
   } else {
     btn2.value!.classList.add("active");
   }
-  story.value?.scrollIntoView({behavior: 'smooth'})
+  story.value?.scrollIntoView({ behavior: "smooth" });
 };
+
+watch(
+  show,
+  (newValue, old) => {
+    if (show.value.ourStory === true) {
+        story.value?.scrollIntoView({ behavior: "smooth" })
+    }
+  },
+  { deep: true }
+);
 </script>
 
 <style scoped lang="less">
@@ -128,7 +138,7 @@ const makeActive = (pos: number) => {
     width: 27px;
     height: 27px;
     border-radius: 100%;
-    border: 2px solid #b1b1b1;
+    border: 1px solid #bfbfbf;
     background: none;
     font-size: 1.4rem;
 

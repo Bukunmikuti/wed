@@ -3,10 +3,9 @@
   <Header></Header>
   <Story></Story>
 
-  <div id="images-wrapper">
+  <div id="images-wrapper" ref="swiperEl">
     <div id="swiper-wrapper">
       <swiper
-        ref="swiperEl"
         :modules="modules"
         :slides-per-view="perView"
         :centered-slides="true"
@@ -37,7 +36,7 @@
     </div>
   </div>
 
-  <div id="details">
+  <div id="details" ref="venueEl">
     <div class="title">
       <Icon name="ph:flower-lotus-duotone" size="30px" color="#de66de" />
       <h2>When & Where</h2>
@@ -53,7 +52,7 @@
           Alagbole Akute Road.
         </p>
       </div>
-      <div class="card">
+      <div class="card" ref="card2" @mouseenter="removeHover">
         <Icon name="fa-solid:glass-cheers" size="40px"></Icon>
         <h3>The Reception</h3>
         <p>2:00PM - 4:00PM<br /></p>
@@ -66,7 +65,7 @@
     <Button @click="toCalender">Add to calender</Button>
   </div>
 
-  <div id="map-wrapper">
+  <div id="map-wrapper" ref="mapEl">
     <div class="map">
       <div
         id="my-map-display"
@@ -75,12 +74,13 @@
         <iframe
           style="height: 100%; width: 100%; border: 0"
           frameborder="0"
-          src="https://www.google.com/maps/embed/v1/place?q=23+Akanni+Street,+Bariga,+Lagos,+Nigeria.&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+          src="https://www.google.com/maps/embed/v1/place?q=Praise+Event+Center,+Alagbole+Akute+Road,+Lagos,+Nigeria.&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
         ></iframe>
       </div>
     </div>
   </div>
 
+  <Gift></Gift>
   <Guest></Guest>
   <Thanks></Thanks>
 </template>
@@ -94,6 +94,34 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 const modules = ref([EffectCoverflow, Autoplay]);
 const card = ref<HTMLElement>();
+const card2 = ref<HTMLElement>();
+const swiperEl = ref<HTMLElement>();
+const venueEl = ref<HTMLElement>();
+const mapEl = ref<HTMLElement>();
+
+watch(
+  show,
+  (newValue, old) => {
+    if (show.value.gallery === true) {
+      swiperEl.value?.scrollIntoView({ behavior: "smooth" });
+    }
+    if (show.value.venue === true) {
+      venueEl.value?.scrollIntoView({ behavior: "smooth" });
+    }
+    if (show.value.map === true) {
+      mapEl.value?.scrollIntoView({ behavior: "smooth" });
+    }
+  },
+  { deep: true }
+);
+
+onMounted(() => {
+  card.value?.classList.add("hover");
+});
+
+const removeHover = () => {
+  card.value?.classList.remove("hover");
+};
 
 const screenWidth = ref(
   window.innerWidth > 0 ? window.innerWidth : screen.width
@@ -123,7 +151,6 @@ const toCalender = () => {
 </script>
 
 <style scoped lang="less">
-
 #images-wrapper {
   margin-top: 30px;
   width: 100%;
@@ -191,7 +218,6 @@ const toCalender = () => {
 
 .container {
   width: 90%;
-  margin-top: 20px;
 
   @media @desktop {
     display: flex;
@@ -211,14 +237,15 @@ const toCalender = () => {
     transition: background 200ms ease-in-out;
     border: 2.5px solid #e678e6;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 20px;
     @media @desktop {
       width: 400px;
       height: 300px;
     }
 
-    &:hover {
+    &:hover,
+    &.hover {
       background: #e678e6;
       color: white !important;
 

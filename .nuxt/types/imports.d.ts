@@ -35,6 +35,7 @@ declare global {
   const hasInjectionContext: typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['hasInjectionContext']
   const inject: typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['inject']
   const injectHead: typeof import('../../node_modules/.pnpm/@unhead+vue@1.9.14_vue@3.4.30/node_modules/@unhead/vue')['injectHead']
+  const isMenu: typeof import('../../utils/state')['isMenu']
   const isNuxtError: typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/error')['isNuxtError']
   const isPrerendered: typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/payload')['isPrerendered']
   const isProxy: typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['isProxy']
@@ -80,6 +81,7 @@ declare global {
   const refreshNuxtData: typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/asyncData')['refreshNuxtData']
   const reloadNuxtApp: typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/chunk')['reloadNuxtApp']
   const requestIdleCallback: typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/compat/idle-callback')['requestIdleCallback']
+  const resetShow: typeof import('../../utils/state')['resetShow']
   const resolveComponent: typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['resolveComponent']
   const setInterval: typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/compat/interval')['setInterval']
   const setPageLayout: typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/router')['setPageLayout']
@@ -87,6 +89,7 @@ declare global {
   const shallowReactive: typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['shallowReactive']
   const shallowReadonly: typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['shallowReadonly']
   const shallowRef: typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['shallowRef']
+  const show: typeof import('../../utils/state')['show']
   const showError: typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/error')['showError']
   const toRaw: typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['toRaw']
   const toRef: typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['toRef']
@@ -215,6 +218,7 @@ declare module 'vue' {
     readonly hasInjectionContext: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['hasInjectionContext']>
     readonly inject: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['inject']>
     readonly injectHead: UnwrapRef<typeof import('../../node_modules/.pnpm/@unhead+vue@1.9.14_vue@3.4.30/node_modules/@unhead/vue')['injectHead']>
+    readonly isMenu: UnwrapRef<typeof import('../../utils/state')['isMenu']>
     readonly isNuxtError: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/error')['isNuxtError']>
     readonly isPrerendered: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/payload')['isPrerendered']>
     readonly isProxy: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['isProxy']>
@@ -260,6 +264,7 @@ declare module 'vue' {
     readonly refreshNuxtData: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/asyncData')['refreshNuxtData']>
     readonly reloadNuxtApp: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/chunk')['reloadNuxtApp']>
     readonly requestIdleCallback: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/compat/idle-callback')['requestIdleCallback']>
+    readonly resetShow: UnwrapRef<typeof import('../../utils/state')['resetShow']>
     readonly resolveComponent: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['resolveComponent']>
     readonly setInterval: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/compat/interval')['setInterval']>
     readonly setPageLayout: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/router')['setPageLayout']>
@@ -267,6 +272,7 @@ declare module 'vue' {
     readonly shallowReactive: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['shallowReactive']>
     readonly shallowReadonly: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['shallowReadonly']>
     readonly shallowRef: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['shallowRef']>
+    readonly show: UnwrapRef<typeof import('../../utils/state')['show']>
     readonly showError: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/error')['showError']>
     readonly toRaw: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['toRaw']>
     readonly toRef: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['toRef']>
@@ -388,6 +394,7 @@ declare module '@vue/runtime-core' {
     readonly hasInjectionContext: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['hasInjectionContext']>
     readonly inject: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['inject']>
     readonly injectHead: UnwrapRef<typeof import('../../node_modules/.pnpm/@unhead+vue@1.9.14_vue@3.4.30/node_modules/@unhead/vue')['injectHead']>
+    readonly isMenu: UnwrapRef<typeof import('../../utils/state')['isMenu']>
     readonly isNuxtError: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/error')['isNuxtError']>
     readonly isPrerendered: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/payload')['isPrerendered']>
     readonly isProxy: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['isProxy']>
@@ -433,6 +440,7 @@ declare module '@vue/runtime-core' {
     readonly refreshNuxtData: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/asyncData')['refreshNuxtData']>
     readonly reloadNuxtApp: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/chunk')['reloadNuxtApp']>
     readonly requestIdleCallback: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/compat/idle-callback')['requestIdleCallback']>
+    readonly resetShow: UnwrapRef<typeof import('../../utils/state')['resetShow']>
     readonly resolveComponent: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['resolveComponent']>
     readonly setInterval: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/compat/interval')['setInterval']>
     readonly setPageLayout: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/router')['setPageLayout']>
@@ -440,6 +448,7 @@ declare module '@vue/runtime-core' {
     readonly shallowReactive: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['shallowReactive']>
     readonly shallowReadonly: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['shallowReadonly']>
     readonly shallowRef: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['shallowRef']>
+    readonly show: UnwrapRef<typeof import('../../utils/state')['show']>
     readonly showError: UnwrapRef<typeof import('../../node_modules/.pnpm/nuxt@3.12.2_@opentelemetry+api@1.9.0_less@4.2.0_vite@5.3.1/node_modules/nuxt/dist/app/composables/error')['showError']>
     readonly toRaw: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['toRaw']>
     readonly toRef: UnwrapRef<typeof import('../../node_modules/.pnpm/vue@3.4.30/node_modules/vue')['toRef']>
