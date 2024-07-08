@@ -99,8 +99,9 @@ const hideMenu = () => {
   color: white;
 
   p {
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 2.3rem;
+    font-weight: 700;
+    cursor: pointer;
 
     &:hover {
       color: #dcdcdc;
